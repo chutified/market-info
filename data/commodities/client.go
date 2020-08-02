@@ -1,7 +1,10 @@
 package data
 
 import (
-	"github.com/chutified/resource-finder/protos/commodity"
+	"context"
+
+	commodity "github.com/chutified/commodity-prices/protos/commodity"
+	models "github.com/chutified/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )
@@ -31,6 +34,33 @@ func (cs *CommodityService) Init(target string) error {
 	cs.client = commodity.NewCommodityClient(conn)
 	cs.conn = conn
 	return nil
+}
+
+// GetCommodity compose the request to the commodity service server
+// and returns the latest commodity data.
+func (cs *CommodityService) GetCommodity(name string) (*models.Commodity, error) {
+
+	// define the request
+	req := &commodity.CommodityRequest{Name: name}
+
+	// call the server
+	resp, err := cs.client.GetCommodity(context.Background(), req)
+	if err != nil {
+		return nil, errors.Wrap(err, "calling the server")
+	}
+
+	// construct the Commodity
+	cmd := &models.Commodity{
+		Name:       resp.GetName(),
+		Price:      resp.GetPrice(),
+		Currency:   resp.GetCurrency(),
+		WeightUnit: resp.GetWeightUnit(),
+		ChangeP:    resp.GetChangeP(),
+		ChangeN:    resp.GetChangeN(),
+		LastUpdate: resp.GetLastUpdate(),
+	}
+
+	return cmd, nil
 }
 
 // Close cancels the connection between the client and the server.
