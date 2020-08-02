@@ -16,8 +16,8 @@ type CommodityService struct {
 	conn   *grpc.ClientConn
 }
 
-// New is the CommodityService constructor.
-func New() *CommodityService {
+// NewCommodity is the CommodityService constructor.
+func NewCommodity() *CommodityService {
 	return &CommodityService{}
 }
 
