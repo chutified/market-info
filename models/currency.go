@@ -4,16 +4,16 @@ package models
 type Currency struct {
 
 	// Name is the currency code of the currency.
-	Name string
+	Name string `json:"Name"`
 	// The name of the country where the currency came from.
-	Country string
+	Country string `json:"Country"`
 	// Fullname of the currency.
-	Description string
+	Description string `json:"Description"`
 
 	// Latest currency change in percentages.
-	Change float32
+	Change float32 `json:"Change"`
 	// Exchange rate to USD.
-	RateUSD float32
+	RateUSD float32 `json:"RateUSD"`
 	// Last time updated.
-	UpdatedAt string
+	UpdatedAt string `json:"UpdatedAt"`
 }
