@@ -7,6 +7,9 @@ github.com/chutified/commodity-prices v0.0.0-20200801163254-d418cb9b8183 h1:UhS9
 github.com/chutified/commodity-prices v0.0.0-20200801163254-d418cb9b8183/go.mod h1:K/dc0x9JW8XV/sDYs8u49sJO1YXW2VN6eGQDQUBO6AM=
 github.com/chutified/crypto-currencies v0.0.0-20200801160403-dcd1fbcfa1b7 h1:yTXAEGIQcQ0xFhil0V0BOAqGqO8DOyGPqVlByjMbSZk=
 github.com/chutified/crypto-currencies v0.0.0-20200801160403-dcd1fbcfa1b7/go.mod h1:2+kWwvkhAkfxBGsAMyiqEM8KhpXTj9Cq8ZNyHOFGEOk=
+github.com/chutified/currencies v0.0.0-20200801085945-993a5f13682d h1:Pym/onKkTyPYvCFgJVr01kJeGW7OToslO8TXKlsGi/s=
+github.com/chutified/currencies v0.0.0-20200801085945-993a5f13682d/go.mod h1:l+E6Qm6ei4s8XglD3Q5i2PEkGu5ewOC7wRvsh88QrzY=
+github.com/chutified/resource-finder v0.0.0-20200718062720-b1337608abe3/go.mod h1:ERLbaS3W5CUoe5+9VUg7//MSG20qlkQaJsTKsPEnyT0=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
