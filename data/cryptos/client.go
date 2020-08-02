@@ -26,7 +26,7 @@ func (cs *CryptoService) Init(target string) error {
 	// get connection
 	conn, err := grpc.Dial(target, grpc.WithInsecure())
 	if err != nil {
-		return errors.Wrap(err, "unable to dial commodity service")
+		return errors.Wrap(err, "unable to dial crypto service")
 	}
 
 	// register client
