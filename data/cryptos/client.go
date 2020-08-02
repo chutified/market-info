@@ -1,7 +1,10 @@
 package data
 
 import (
+	"context"
+
 	crypto "github.com/chutified/crypto-currencies/protos/crypto"
+	"github.com/chutified/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )
@@ -35,4 +38,34 @@ func (cs *CryptoService) Init(target string) error {
 // Close cancels the connection between the client and the server.
 func (cs *CryptoService) Close() error {
 	return cs.conn.Close()
+}
+
+// GetCrypto sends the request to the commodity service server
+// and returns the latest cryptocurrency data.
+func (cs *CryptoService) GetCrypto(name string) (*models.Crypto, error) {
+
+	// define the request
+	req := &crypto.GetCryptoRequest{Name: name}
+
+	// call the server
+	resp, err := cs.client.GetCrypto(context.Background(), req)
+	if err != nil {
+		return nil, errors.Wrap(err, "calling the server")
+	}
+
+	// construct the Crypto
+	cpto := &models.Crypto{
+		Name:              resp.GetName(),
+		Symbol:            resp.GetSymbol(),
+		MarketCapUSD:      resp.GetMarketCapUSD(),
+		Price:             resp.GetPrice(),
+		CirculatingSupply: resp.GetCirculatingSupply(),
+		Mineable:          resp.GetMineable(),
+		Volume:            resp.GetVolume(),
+		ChangeHour:        resp.GetChangeHour(),
+		ChangeDay:         resp.GetChangeDay(),
+		ChangeWeek:        resp.GetChangeWeek(),
+	}
+
+	return cpto, nil
 }
