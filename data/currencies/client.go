@@ -2,6 +2,7 @@ package data
 
 import (
 	currency "github.com/chutified/currencies/protos/currency"
+	"github.com/chutified/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )
@@ -17,6 +18,7 @@ func NewCurrency() *CurrencyService {
 	return &CurrencyService{}
 }
 
+// Init starts the server connection and enables rpc calls.
 func (cs *CurrencyService) Init(target string) error {
 
 	// get connection
@@ -35,3 +37,6 @@ func (cs *CurrencyService) Init(target string) error {
 func (cs *CurrencyService) Close() error {
 	return cs.conn.Close()
 }
+
+func (cs *CurrencyService) GetCurrency(name string) (*models.Currency, error) { return nil, nil }
+func (cs *CurrencyService) GetRate(base, dest string) (*models.Rate, error)   { return nil, nil }
