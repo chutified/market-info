@@ -41,7 +41,7 @@ func (cs *CommodityService) Close() error {
 	return cs.conn.Close()
 }
 
-// GetCommodity compose the request to the commodity service server
+// GetCommodity sends the request to the commodity service server
 // and returns the latest commodity data.
 func (cs *CommodityService) GetCommodity(name string) (*models.Commodity, error) {
 
