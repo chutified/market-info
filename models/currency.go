@@ -17,3 +17,9 @@ type Currency struct {
 	// Last time updated.
 	UpdatedAt string `json:"UpdatedAt"`
 }
+
+// Rate model holds the exchange rate.
+type Rate struct {
+	// Exchange rate.
+	Rate float32 `json:"Rate"`
+}
