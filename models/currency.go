@@ -19,7 +19,7 @@ type Currency struct {
 }
 
 // ExchangeRate holds the exchange rate.
-type ExchangeRate {
+type ExchangeRate struct {
 	// Exchange rate.
 	Rate float32 `json:"Rate"`
 }
