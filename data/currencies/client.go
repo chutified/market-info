@@ -4,7 +4,7 @@ import (
 	"context"
 
 	currency "github.com/chutified/currencies/protos/currency"
-	"github.com/chutified/market-info/models"
+	models "github.com/chutified/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )
@@ -65,4 +65,25 @@ func (cs *CurrencyService) GetCurrency(name string) (*models.Currency, error) {
 
 	return ccy, nil
 }
-func (cs *CurrencyService) GetRate(base, dest string) (*models.Rate, error) { return nil, nil }
+
+// GetRate sends the request to the currency service server
+// and returns the current exchange rate of two given currencies.
+func (cs *CurrencyService) GetRate(base, dest string) (*models.Rate, error) {
+
+	// define request
+	res := &currency.GetRateRequest{
+		Base:        base,
+		Destination: dest,
+	}
+
+	// call the server
+	resp, err := cs.client.GetRate(context.Background(), res)
+	if err != nil {
+		return nil, errors.Wrap(err, "calling the server")
+	}
+
+	// construct the  Rate
+	rte := &models.ExchangeRate{Rate: resp.GetRate()}
+
+	return rte, nil
+}
