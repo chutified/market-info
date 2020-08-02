@@ -36,6 +36,11 @@ func (cs *CommodityService) Init(target string) error {
 	return nil
 }
 
+// Close cancels the connection between the client and the server.
+func (cs *CommodityService) Close() error {
+	return cs.conn.Close()
+}
+
 // GetCommodity compose the request to the commodity service server
 // and returns the latest commodity data.
 func (cs *CommodityService) GetCommodity(name string) (*models.Commodity, error) {
@@ -61,9 +66,4 @@ func (cs *CommodityService) GetCommodity(name string) (*models.Commodity, error)
 	}
 
 	return cmd, nil
-}
-
-// Close cancels the connection between the client and the server.
-func (cs *CommodityService) Close() error {
-	return cs.conn.Close()
 }
