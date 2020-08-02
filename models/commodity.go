@@ -1,4 +1,4 @@
-package data
+package models
 
 // Commodity model holds the data about the commodity.
 type Commodity struct {
