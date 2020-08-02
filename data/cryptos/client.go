@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-// CryptoService the rpc calls. The service provides cryptocurrency data.
+// CryptoService allows the rpc calls. The service provides cryptocurrency data.
 type CryptoService struct {
 	client crypto.CryptoClient
 	conn   *grpc.ClientConn
