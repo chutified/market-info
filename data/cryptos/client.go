@@ -4,7 +4,7 @@ import (
 	"context"
 
 	crypto "github.com/chutified/crypto-currencies/protos/crypto"
-	"github.com/chutified/market-info/models"
+	models "github.com/chutified/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )
