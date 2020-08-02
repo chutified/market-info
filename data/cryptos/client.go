@@ -40,7 +40,7 @@ func (cs *CryptoService) Close() error {
 	return cs.conn.Close()
 }
 
-// GetCrypto sends the request to the commodity service server
+// GetCrypto sends the request to the cryptocurrency service server
 // and returns the latest cryptocurrency data.
 func (cs *CryptoService) GetCrypto(name string) (*models.Crypto, error) {
 
