@@ -1,6 +1,8 @@
 package data
 
 import (
+	"context"
+
 	currency "github.com/chutified/currencies/protos/currency"
 	"github.com/chutified/market-info/models"
 	"github.com/pkg/errors"
@@ -38,5 +40,29 @@ func (cs *CurrencyService) Close() error {
 	return cs.conn.Close()
 }
 
-func (cs *CurrencyService) GetCurrency(name string) (*models.Currency, error) { return nil, nil }
-func (cs *CurrencyService) GetRate(base, dest string) (*models.Rate, error)   { return nil, nil }
+// GetCurrency sends the request to the currency service server
+// and returns the latest currency data.
+func (cs *CurrencyService) GetCurrency(name string) (*models.Currency, error) {
+
+	// define the request
+	req := &currency.GetCurrencyRequest{Name: name}
+
+	// call the server
+	resp, err := cs.client.GetCurrency(context.Background(), req)
+	if err != nil {
+		return nil, errors.Wrap(err, "calling the server")
+	}
+
+	// construct the Currency
+	ccy := &models.Currency{
+		Name:        resp.GetName(),
+		Country:     resp.GetCountry(),
+		Description: resp.GetDescription(),
+		Change:      resp.GetChange(),
+		RateUSD:     resp.GetRateUSD(),
+		UpdatedAt:   resp.GetUpdatedAt(),
+	}
+
+	return ccy, nil
+}
+func (cs *CurrencyService) GetRate(base, dest string) (*models.Rate, error) { return nil, nil }
