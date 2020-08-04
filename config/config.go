@@ -21,7 +21,7 @@ type Config struct {
 func GetConfig(path string) (*Config, error) {
 
 	// load configuration
-	content, err := ioutil.ReadFile(filepath.Join(rootDir(), path))
+	content, err := ioutil.ReadFile(filepath.Join(rootDir(), "..", path))
 	if err != nil {
 		return nil, errors.Wrap(err, "could not read config file")
 	}
