@@ -68,7 +68,7 @@ func (cs *CurrencyService) GetCurrency(name string) (*models.Currency, error) {
 
 // GetRate sends the request to the currency service server
 // and returns the current exchange rate of two given currencies.
-func (cs *CurrencyService) GetRate(base, dest string) (*models.Rate, error) {
+func (cs *CurrencyService) GetRate(base, dest string) (*models.ExchangeRate, error) {
 
 	// define request
 	res := &currency.GetRateRequest{
