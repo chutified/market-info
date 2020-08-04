@@ -1,4 +1,1 @@
-.PHONY: protogen
-
-protogen:
-	protoc -I
+.PHONY:
