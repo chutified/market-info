@@ -11,10 +11,10 @@ import (
 
 // Config defines a configuration for the web API.
 type Config struct {
-	apiPort                string `yaml:"api_port"`
-	commodityServiceTarget string `yaml:"commodity_service_target"`
-	currencyServiceTarget  string `yaml:"currency_service_target"`
-	cryptoServiceTarget    string `yaml:"crypto_service_target"`
+	APIPort                string `yaml:"api_port"`
+	CommodityServiceTarget string `yaml:"commodity_service_target"`
+	CurrencyServiceTarget  string `yaml:"currency_service_target"`
+	CryptoServiceTarget    string `yaml:"crypto_service_target"`
 }
 
 // GetConfig tries to load and handle the configuration file.
