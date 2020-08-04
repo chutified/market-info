@@ -11,7 +11,7 @@ import (
 
 // Config defines a configuration for the web API.
 type Config struct {
-	APIPort                string `yaml:"api_port"`
+	APIPort                int    `yaml:"api_port"`
 	CommodityServiceTarget string `yaml:"commodity_service_target"`
 	CurrencyServiceTarget  string `yaml:"currency_service_target"`
 	CryptoServiceTarget    string `yaml:"crypto_service_target"`
