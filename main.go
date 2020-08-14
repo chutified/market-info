@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"log"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -19,14 +20,12 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 
 	// get config
-	log.Printf("Getting config file...")
 	cfg, err := config.GetConfig("config.yml")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// server
-	log.Printf("Setting server...")
 	srv := server.New()
 	err = srv.Set(cfg)
 	if err != nil {
@@ -35,7 +34,6 @@ func main() {
 
 	defer func() {
 		// gracefully shutting down
-		log.Printf("Stopping server...")
 		err := srv.Stop()
 		if err != nil {
 			log.Fatal(err)
@@ -53,9 +51,11 @@ func main() {
 
 	// run
 	go func() {
-		log.Printf("Server is running on port %d.", cfg.APIPort)
+		log.Printf("Server is running on the port %d.", cfg.APIPort)
 		err := srv.Start()
-		log.Println(err)
+		if err != http.ErrServerClosed {
+			log.Println(err)
+		}
 	}()
 
 	// catch the termination
