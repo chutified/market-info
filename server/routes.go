@@ -13,21 +13,26 @@ func SetRoutes(r *gin.Engine, h *handlers.Handler) {
 		c.String(200, "pong")
 	})
 
-	// TODO
-	// v1 := r.Group("/v1")
+	v1 := r.Group("/v1")
+	{
 
-	// cmd := v1.Group("/commodity")
-	// {
-	// TODO GetCommodity{name}
-	// }
+		// comodities
+		cmd := v1.Group("/commodity")
+		{
+			cmd.GET("/:name", h.GetCommodity)
+		}
 
-	// crn := v1.Group("/currency")
-	// {
+		// currencies
+		crn := v1.Group("/currency")
+		{
+			crn.GET("/:name", h.GetCurrency)
+			crn.POST("/:base/:dest", h.GetRate)
+		}
 
-	// }
-
-	// crp := v1.Group("/crypto")
-	// {
-
-	// }
+		// cryptocurrencies
+		crp := v1.Group("/crypto")
+		{
+			crp.GET("/:name", h.GetCrypto)
+		}
+	}
 }
