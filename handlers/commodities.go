@@ -6,10 +6,10 @@ import "github.com/gin-gonic/gin"
 func (h *Handler) GetCommodity(c *gin.Context) {
 
 	// get requested the commodity
-	name := c.Param("name")
-	cmd, err := h.commoditySrv.GetCommodity(name)
-	if err != nil {
-		c.JSON() // TODO
-	}
+	// name := c.Param("name")
+	// cmd, err := h.commoditySrv.GetCommodity(name)
+	// if err != nil {
+	//     c.JSON() // TODO
+	// }
 
 }
