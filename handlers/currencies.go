@@ -5,7 +5,7 @@ import "github.com/gin-gonic/gin"
 // GetCurrency provides the data about the given currency.
 func (h *Handler) GetCurrency(c *gin.Context) {
 
-	name := c.Params("name")
+	name := c.Param("name")
 
 	crn, err := h.currencySrv.GetCurrency(name)
 	if err != nil {
@@ -19,11 +19,11 @@ func (h *Handler) GetCurrency(c *gin.Context) {
 // between two currencies.
 func (h *Handler) GetRate(c *gin.Context) {
 
-	base := c.Params("base")
-	dest := c.Params("dest")
+	base := c.Param("base")
+	dest := c.Param("dest")
 
 	// calculate the rate
-	rate, err := h.cryptoSrv.GetRate(base, dest)
+	rate, err := h.currencySrv.GetRate(base, dest)
 	if err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 	}
