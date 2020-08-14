@@ -5,6 +5,13 @@ import "github.com/gin-gonic/gin"
 func (h *Handler) GetCurrency(c *gin.Context) {
 
 	name := c.Params("name")
+
+	crn, err := h.currencySrv.GetCurrency(name)
+	if err != nil {
+		c.JSON(400, gin.H{"error": gin.H{"error": err.Error()}})
+	}
+
+	c.JSON(200, crn)
 }
 
 func (h *Handler) GetRate(c *gin.Context) {
