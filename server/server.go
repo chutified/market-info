@@ -1,6 +1,7 @@
 package server
 
 import (
+	"context"
 	"fmt"
 	"io"
 	"net/http"
@@ -83,6 +84,20 @@ func (s *Server) Start() error {
 
 // Stop closes all connections and dials.
 func (s *Server) Stop() error {
+
 	// stop the handler's services
-	return s.h.Stop()
+	err := s.h.Stop()
+	if err != nil {
+		return errors.Wrap(err, "stopping handler's services")
+	}
+
+	// gracefully shutdown
+	timeout, cancel := context.WithTimeout(context.Background(), 6*time.Second)
+	defer cancel()
+
+	err = s.srv.Shutdown(timeout)
+	if err != nil {
+		return errors.Wrap(err, "failed to gracefully shutdown")
+	}
+	return nil
 }
