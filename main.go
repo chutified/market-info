@@ -13,6 +13,17 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// @title Market Info API
+// @version 1.0
+// @description The Market Infor provides the latest data about commodities, currencies and cryptocurrencies.
+
+// @contact.name Tommy Chu
+// @contact.email tommychu2256@gmail.com
+
+// @host localhost:3001
+// @BasePath /v1
+// @schemes http
+
 func main() {
 	log := log.New(os.Stdout, "[STATUS] ", log.LstdFlags)
 
