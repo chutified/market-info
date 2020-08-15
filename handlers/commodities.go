@@ -3,6 +3,16 @@ package handlers
 import "github.com/gin-gonic/gin"
 
 // GetCommodity serves the commodity data to the client.
+// @Summary returns the latest available commodity's data
+// @Description get commodity by name
+// @ID get-commodity
+// @Accept  json
+// @Produce  json
+// @Param id path int true "Account ID"
+// @Param name path string true "Name fo the commodity"
+// @Success 200 {object} models.Commodity
+// @Failure 400 {object} httputil.HTTPError
+// @Router /commodity/{name} [get]
 func (h *Handler) GetCommodity(c *gin.Context) {
 
 	// get requested the commodity
