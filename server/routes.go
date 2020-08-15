@@ -3,6 +3,8 @@ package server
 import (
 	handlers "github.com/chutified/market-info/handlers"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 // SetRoutes applies all the routings.
@@ -35,4 +37,7 @@ func SetRoutes(r *gin.Engine, h *handlers.Handler) {
 			crp.GET("/:name", h.GetCrypto)
 		}
 	}
+
+	// swagger documentation
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
