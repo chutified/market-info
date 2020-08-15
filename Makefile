@@ -1,4 +1,4 @@
-.PHONY:
+.PHONY: build, run
 
 build:
 	docker build -t market-info --rm .
