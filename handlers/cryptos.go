@@ -11,8 +11,8 @@ import "github.com/gin-gonic/gin"
 // @Produce  json
 // @Param name path string true "Name of the commodity"
 // @Success 200 {object} models.Crypto
-// @Failure 400 {object} httputil.HTTPError
-// @Router /crypto/{name} [get]
+// @Failure 400 {json} string
+// @Router /v1/crypto/{name} [get]
 func (h *Handler) GetCrypto(c *gin.Context) {
 
 	name := c.Param("name")

@@ -10,8 +10,8 @@ import "github.com/gin-gonic/gin"
 // @Produce  json
 // @Param name path string true "Name of the commodity"
 // @Success 200 {object} models.Commodity
-// @Failure 400 {object} httputil.HTTPError
-// @Router /commodity/{name} [get]
+// @Failure 400 {json} string
+// @Router /v1/commodity/{name} [get]
 func (h *Handler) GetCommodity(c *gin.Context) {
 
 	// get requested the commodity

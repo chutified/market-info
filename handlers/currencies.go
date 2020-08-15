@@ -10,8 +10,8 @@ import "github.com/gin-gonic/gin"
 // @Produce  json
 // @Param name path string true "Name of the currency"
 // @Success 200 {object} models.Crypto
-// @Failure 400 {object} httputil.HTTPError
-// @Router /currency/{name} [get]
+// @Failure 400 {json} string
+// @Router /v1/currency/{name} [get]
 func (h *Handler) GetCurrency(c *gin.Context) {
 
 	name := c.Param("name")
@@ -34,8 +34,8 @@ func (h *Handler) GetCurrency(c *gin.Context) {
 // @Param base path string true "Name of the base currency"
 // @Param dest path string true "Name of the destination currency"
 // @Success 200 {object} models.ExchangeRate
-// @Failure 400 {object} httputil.HTTPError
-// @Router /currency/{base}/{dest} [post]
+// @Failure 400 {json} string
+// @Router /v1/currency/{base}/{dest} [post]
 func (h *Handler) GetRate(c *gin.Context) {
 
 	base := c.Param("base")
