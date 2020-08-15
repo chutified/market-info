@@ -3,6 +3,15 @@ package handlers
 import "github.com/gin-gonic/gin"
 
 // GetCurrency provides the data about the given currency.
+// @Summary returns the latest available currency's data
+// @Description get currency by name or symbol
+// @ID get-currency
+// @Accept  json
+// @Produce  json
+// @Param name path string true "Name of the currency"
+// @Success 200 {object} models.Crypto
+// @Failure 400 {object} httputil.HTTPError
+// @Router /currency/{name} [get]
 func (h *Handler) GetCurrency(c *gin.Context) {
 
 	name := c.Param("name")
@@ -17,6 +26,16 @@ func (h *Handler) GetCurrency(c *gin.Context) {
 
 // GetRate handles the request and calculates the exchange rate
 // between two currencies.
+// @Summary calculates the exchange rate of two currencies
+// @Description get exchange rate
+// @ID get-rate
+// @Accept  json
+// @Produce  json
+// @Param base path string true "Name of the base currency"
+// @Param dest path string true "Name of the destination currency"
+// @Success 200 {object} models.ExchangeRate
+// @Failure 400 {object} httputil.HTTPError
+// @Router /currency/{base}/{dest} [post]
 func (h *Handler) GetRate(c *gin.Context) {
 
 	base := c.Param("base")

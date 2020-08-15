@@ -8,8 +8,7 @@ import "github.com/gin-gonic/gin"
 // @ID get-commodity
 // @Accept  json
 // @Produce  json
-// @Param id path int true "Account ID"
-// @Param name path string true "Name fo the commodity"
+// @Param name path string true "Name of the commodity"
 // @Success 200 {object} models.Commodity
 // @Failure 400 {object} httputil.HTTPError
 // @Router /commodity/{name} [get]
