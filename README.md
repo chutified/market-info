@@ -10,7 +10,6 @@ The web app connects 3 microservices and usus gRPC to communicate with all of th
         - Cryptocurency service
     - Tools
     - API sources
-    - API endpoints
     - API documentation
     - Configuration
     - Directory structure
@@ -47,10 +46,10 @@ The REST API server will start without any of these dependencies, but the handle
     - Commodity (<a href="https://markets.businessinsider.com/currencies" target="_blank">Markets - Business Insider</a>)
     - Currency (<a href="https://markets.businessinsider.com/currencies" target="_blank">Markets - Business Insider</a>)
     - Cryptocurency (<a href="https://coinmarketcap.com/all/views/all/" target="_blank">CoinMarketCap</a>)
-    - 
-## API endpoints
 
 ## API documentation
+The API uses the industry standart Swagger tool for its documentation.
+Swagger documentation file: <a href="https://github.com/chutified/market-info/blob/master/docs/swagger.json" target="_blank">JSON</a>/<a href="https://github.com/chutified/market-info/blob/master/docs/swagger.yaml" target="_blank">YAML</a>
 
 ## Examples
 
