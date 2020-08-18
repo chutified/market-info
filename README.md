@@ -44,6 +44,9 @@ The REST API server will start without any of these dependencies, but the handle
     - <a href="https://swagger.io/" target="_blank">Swagger 2.0</a>
 
 ## API sources
+    - Commodity (<a href="https://markets.businessinsider.com/currencies" target="_blank">Markets - Business Insider</a>)
+    - Currency (<a href="https://markets.businessinsider.com/currencies" target="_blank">Markets - Business Insider</a>)
+    - Cryptocurency (<a href="https://coinmarketcap.com/all/views/all/" target="_blank">CoinMarketCap</a>)
     - 
 ## API endpoints
 
