@@ -20,3 +20,10 @@ The REST API server will start without any of these dependencies, but the handle
     - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Source code</a>
     - <a href="https://github.com/chutified/crypto-currencies/blob/master/README.md" taget="_blank">Documentation</a>
     - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Dockerfile</a>
+
+## Tools
+    - <a href="https://gin-gonic.com/" target="_blank">Gin framework</a>
+    - <a href="https://grpc.io/" target="_blank">gRPC</a>
+    - <a href="https://git-scm.com/" target="_blank">Git</a>
+    - <a href="https://www.docker.com/" target="_blank">Docker Engine</a>
+    - <a href="https://swagger.io/" target="_blank">Swagger 2.0</a>
