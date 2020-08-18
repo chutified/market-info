@@ -42,3 +42,37 @@ The REST API server will start without any of these dependencies, but the handle
 ## Configuration
 
 ## Directory structure
+```bash
+_
+├── config
+│   └── config.go
+├── data
+│   ├── commodity_service.go
+│   ├── crypto_service.go
+│   └── currency_service.go
+├── docs
+│   ├── docs.go
+│   ├── swagger.json
+│   └── swagger.yaml
+├── handlers
+│   ├── commodities.go
+│   ├── cryptos.go
+│   ├── currencies.go
+│   ├── errors.go
+│   └── handler.go
+├── models
+│   ├── commodity.go
+│   ├── crypto.go
+│   └── currency.go
+├── server
+│   ├── routes.go
+│   └── server.go
+├── config.yml
+├── Dockerfile
+├── go.mod
+├── go.sum
+├── main.go
+├── Makefile
+├── README.md
+└── server.log
+```
