@@ -30,3 +30,15 @@ The REST API server will start without any of these dependencies, but the handle
     - <a href="https://git-scm.com/" target="_blank">Git</a>
     - <a href="https://www.docker.com/" target="_blank">Docker Engine</a>
     - <a href="https://swagger.io/" target="_blank">Swagger 2.0</a>
+
+## API sources
+    - 
+## API endpoints
+
+## API documentation
+
+## Examples
+
+## Configuration
+
+## Directory structure
