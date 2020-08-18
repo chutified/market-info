@@ -11,6 +11,8 @@ The web app connects 3 microservices and usus gRPC to communicate with all of th
     - Tools
     - API sources
     - API documentation
+    - Usage
+    - Examples
     - Configuration
     - Directory structure
 
@@ -50,6 +52,8 @@ The REST API server will start without any of these dependencies, but the handle
 ## API documentation
 The API uses the industry standart Swagger tool for its documentation.
 Swagger documentation file: <a href="https://github.com/chutified/market-info/blob/master/docs/swagger.json" target="_blank">JSON</a>/<a href="https://github.com/chutified/market-info/blob/master/docs/swagger.yaml" target="_blank">YAML</a>
+
+## Usage
 
 ## Examples
 
