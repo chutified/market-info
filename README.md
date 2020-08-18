@@ -10,16 +10,19 @@ The REST API server will start without any of these dependencies, but the handle
     - <a href="https://github.com/chutified/commodity-prices" taget="_blank">Source code</a>
     - <a href="https://github.com/chutified/commodity-prices/blob/master/README.md" taget="_blank">Documentation</a>
     - <a href="https://github.com/chutified/commodity-prices/blob/master/Dockerfile" taget="_blank">Dockerfile</a>
+    - <a href="https://github.com/chutified/commodity-prices#supported-commodities" target="_blank">Supported commodities</a>
 
 ### Currency service
     - <a href="https://github.com/chutified/currencies" taget="_blank">Source code</a>
     - <a href="https://github.com/chutified/currencies/blob/master/README.md" taget="_blank">Documentation</a>
     - <a href="https://github.com/chutified/currencies/blob/master/Dockerfile" taget="_blank">Dockerfile</a>
+    - <a href="https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes" target="_blank">Supported currencies</a>
 
 ### Cryptocureency service
     - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Source code</a>
     - <a href="https://github.com/chutified/crypto-currencies/blob/master/README.md" taget="_blank">Documentation</a>
     - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Dockerfile</a>
+    - <a href="https://github.com/chutified/crypto-currencies/blob/master/docs/currencies.md" target="_blank">Supported cryptocurrencies</a>
 
 ## Tools
     - <a href="https://gin-gonic.com/" target="_blank">Gin framework</a>
