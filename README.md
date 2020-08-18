@@ -3,6 +3,18 @@ The Market Info is a REST API that provides up-to-date information about the mar
 
 The web app connects 3 microservices and usus gRPC to communicate with all of them, so the service works properly only if other three microservices are also running. To configure the targets (hosts and ports), set the variables in the config.yml file.
 
+## Table of content
+    - Dependencies
+        - Commodity service
+        - Currency service
+        - Cryptocurency service
+    - Tools
+    - API sources
+    - API endpoints
+    - API documentation
+    - Configuration
+    - Directory structure
+
 ## Dependencies
 The REST API server will start without any of these dependencies, but the handler endpoints that use these services will return an error message on requests.
 
@@ -18,7 +30,7 @@ The REST API server will start without any of these dependencies, but the handle
     - <a href="https://github.com/chutified/currencies/blob/master/Dockerfile" taget="_blank">Dockerfile</a>
     - <a href="https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes" target="_blank">Supported currencies</a>
 
-### Cryptocureency service
+### Cryptocurency service
     - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Source code</a>
     - <a href="https://github.com/chutified/crypto-currencies/blob/master/README.md" taget="_blank">Documentation</a>
     - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Dockerfile</a>
