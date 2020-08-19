@@ -58,6 +58,18 @@ Swagger documentation file: <a href="https://github.com/chutified/market-info/bl
 ## Examples
 
 ## Configuration
+**Default:**
+```yaml
+---
+api_port: 80
+commodity_service_target: 'localhost:10501'
+currency_service_target: 'localhost:10502'
+crypto_service_target: 'localhost:10503'
+```
+*api_port:* the port of the host on which the server is running
+*commodity_service_target:* the "host:post" of the commodity microservice server
+*currency_service_target:* the "host:post" of the currency microservice server
+*crypto_service_target:* the "host:post" of the cryptocurrency microservice server
 
 ## Directory structure
 ```bash
