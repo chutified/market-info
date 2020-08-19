@@ -9,7 +9,7 @@ import "github.com/gin-gonic/gin"
 // @Accept  json
 // @Produce  json
 // @Param name path string true "Name of the currency"
-// @Success 200 {object} models.Crypto
+// @Success 200 {object} models.Currency
 // @Failure 400 {json} string
 // @Router /v1/currency/{name} [get]
 func (h *Handler) GetCurrency(c *gin.Context) {
