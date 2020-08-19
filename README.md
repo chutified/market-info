@@ -54,6 +54,17 @@ The API uses the industry standart Swagger tool for its documentation.
 Swagger documentation file: <a href="https://github.com/chutified/market-info/blob/master/docs/swagger.json" target="_blank">JSON</a>/<a href="https://github.com/chutified/market-info/blob/master/docs/swagger.yaml" target="_blank">YAML</a>
 
 ## Usage
+### GET `/commodity/{name}`
+If the commodity is supported, server returns the commodity's `name`, current `price`/`currency`/`weight_unit`, the price's change in `percentage` and `float`, and the time of the `last update`.
+
+### GET `/currency/{name}`
+If the currency is suported, server response with the currency's `name`, `country` in which it originated, `description` as the full name of the currency, `rate to USD`, `change` of the currency value in percentages and the time of the `last update`. The currency service also supports both currency symbols and names as the {name} value in a path.
+
+### POST `/currency/{base}/{dest}`
+If both {base} and {dest} are valid currency names or symbols, server returns the exchange `rate` of the bases and destination currencies. The currency service also supports both currency symbols and names as the {name} value in a path.
+
+### GET `/crypto/{name}`
+If the cryptocurrency is suported, server response with the cryptocurrency's `name`, `symbol`, `price` value in USD, `market capitalization`, `volume`, `circulating supply`, changes in last `hour`/`day`/`week` and whether is the currency `mineable`. The cryptocurrency service also supports both cryptocurrency symbols and names as the {name} value in a path.
 
 ## Examples
 
