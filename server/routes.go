@@ -28,7 +28,7 @@ func SetRoutes(r *gin.Engine, h *handlers.Handler) {
 		crn := v1.Group("/currency")
 		{
 			crn.GET("/:name", h.GetCurrency)
-			crn.POST("/:base/:dest", h.GetRate)
+			crn.GET("/:base/:dest", h.GetRate)
 		}
 
 		// cryptocurrencies
