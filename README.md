@@ -45,9 +45,9 @@ The REST API server will start without any of these dependencies, but the handle
 - [Swagger](https://swagger.io)
 
 ## API sources
-- Commodity ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
-- Currency ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
-- Cryptocurency ([](https://coinmarketcap.com/all/views/all/CoinMarketCap</a>)
+- Commodity ([Business Insider](https://markets.businessinsider.com/currencies))
+- Currency ([Business Inseider](https://markets.businessinsider.com/currencies))
+- Cryptocurency ([CoinMarketCap](https://coinmarketcap.com/all/views/all))
 
 ## API documentation
 The API uses the industry standart Swagger tool for its documentation.
