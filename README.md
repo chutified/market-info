@@ -1,23 +1,23 @@
 # Market Info
-The Market Info is a REST API that provides up-to-date information about the market. More precisely, it is the data of world commodities, currencies and cryptocurrencies. The service allows access to data in JSON via HTTP.
+The Market Info is a REST API that provides up-to-date information about the market. More precisely, it is the data of world commodities, currencies and cryptocurrencies.
 
-The web app connects 3 microservices and usus gRPC to communicate with all of them, so the service works properly only if other three microservices are also running. To configure the targets (hosts and ports), set the variables in the config.yml file.
+The API joins 3 microservices and uses gRPC to communicate with all of them, so the service works properly only if other three microservices are also running. To configure the targets (hosts and ports of microservices), set the variables in the `config.yml` file.
 
 ## Table of content
-    - Dependencies
-        - Commodity service
-        - Currency service
-        - Cryptocurency service
-    - Tools
-    - API sources
-    - API documentation
-    - Usage
-    - Examples
-    - Configuration
-    - Directory structure
+- [Dependencies](https://github.com/chutified/market-info#dependencies)
+    - [Commodity service](https://github.com/chutified/market-info#commodity-service)
+    - [Currency service](https://github.com/chutified/market-info#currency-service)
+    - [Cryptocurency service](https://github.com/chutified/market-info#cryptocurency-service)
+- [Tools](https://github.com/chutified/market-info#tools)
+- [API sources](https://github.com/chutified/market-info#api-sources)
+- [API documentation](https://github.com/chutified/market-info#api-documentation)
+- [Usage](https://github.com/chutified/market-info#usage)
+- [Examples](https://github.com/chutified/market-info#examples)
+- [Configuration](https://github.com/chutified/market-info#configuration)
+- [Directory structure](https://github.com/chutified/market-info#directory-structure)
 
 ## Dependencies
-The REST API server will start without any of these dependencies, but the handler endpoints that use these services will return an error message on requests.
+The REST API server starts without any of these dependencies, but the handlers' endpoints that use these services will return an error message on the requests.
 
 ### Commodity service
 - [Source code](https://github.com/chutified/commodity-prices)
@@ -55,16 +55,16 @@ Swagger documentation file: <a href="https://github.com/chutified/market-info/bl
 
 ## Usage
 ### GET `/commodity/{name}`
-If the commodity is supported, server returns the commodity's `name`, current `price`/`currency`/`weight_unit`, the price's change in `percentage` and `float`, and the time of the `last update`.
+If the commodity is supported, the server returns the commodity's `name`, current `price`/`currency`/`weight_unit`, the price's change in `percentage` and `float`, and the time of the `last update`.
 
 ### GET `/i/currency/{name}`
-If the currency is suported, server response with the currency's `name`, `country` in which it originated, `description` as the full name of the currency, `rate to USD`, `change` of the currency value in percentages and the time of the `last update`. The currency service also supports both currency symbols and names as the {name} value in a path.
+If the currency is supported, the server responses with the currency's `name`, `country` in which it originated, `description` as the full name of the currency, `rate to USD`, `change` of the currency value in percentages and the time of the `last update`. The currency service also supports both currency symbols and names as the {name} value in a path.
 
 ### GET `/c/currency/{base}/{dest}`
-If both {base} and {dest} are valid currency names or symbols, server returns the exchange `rate` of the bases and destination currencies. The currency service also supports both currency symbols and names as the {name} value in a path.
+If both {base} and {dest} are valid currency names or symbols, the server returns the exchange `rate` of the bases and destination currencies. The currency service also supports both currency symbols and names as the {name} value in a path.
 
 ### GET `/crypto/{name}`
-If the cryptocurrency is suported, server response with the cryptocurrency's `name`, `symbol`, `price` value in USD, `market capitalization`, `volume`, `circulating supply`, changes in last `hour`/`day`/`week` and whether is the currency `mineable`. The cryptocurrency service also supports both cryptocurrency symbols and names as the {name} value in a path.
+If the cryptocurrency is supported, the server responses with the cryptocurrency's `name`, `symbol`, `price` value in USD, `market capitalization`, `volume`, `circulating supply`, changes in last `hour`/`day`/`week` and whether is the currency `mineable`. The cryptocurrency service also supports both cryptocurrency symbols and names as the {name} value in a path.
 
 ## Examples
 ### GET /commodity/{name}: `/commodity/coal`
