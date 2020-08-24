@@ -57,25 +57,72 @@ Swagger documentation file: <a href="https://github.com/chutified/market-info/bl
 ### GET `/commodity/{name}`
 If the commodity is supported, server returns the commodity's `name`, current `price`/`currency`/`weight_unit`, the price's change in `percentage` and `float`, and the time of the `last update`.
 
-### GET `/currency/{name}`
+### GET `/i/currency/{name}`
 If the currency is suported, server response with the currency's `name`, `country` in which it originated, `description` as the full name of the currency, `rate to USD`, `change` of the currency value in percentages and the time of the `last update`. The currency service also supports both currency symbols and names as the {name} value in a path.
 
-### GET `/currency/{base}/{dest}`
+### GET `/c/currency/{base}/{dest}`
 If both {base} and {dest} are valid currency names or symbols, server returns the exchange `rate` of the bases and destination currencies. The currency service also supports both currency symbols and names as the {name} value in a path.
 
 ### GET `/crypto/{name}`
 If the cryptocurrency is suported, server response with the cryptocurrency's `name`, `symbol`, `price` value in USD, `market capitalization`, `volume`, `circulating supply`, changes in last `hour`/`day`/`week` and whether is the currency `mineable`. The cryptocurrency service also supports both cryptocurrency symbols and names as the {name} value in a path.
 
 ## Examples
-### GET /commodity/{name}: `/commodity/{name}`
+### GET /commodity/{name}: `/commodity/coal`
+```
+{
+    "Name": "coal",
+    "Price": 49.3,
+    "Currency": "USD",
+    "Weight_unit": "ton",
+    "ChangeP": -0.4,
+    "ChangeN": -0.2,
+    "LastUpdate": 1597363200
+}
+```
 
-### GET /currency/{name}: `/currency/{name}`
+### GET /i/currency/{name}: `/i/currency/cad`
+```
+{
+    "Name": "CAD",
+    "Country": "Canada",
+    "Description": "Canadian Dollar",
+    "Change": 0.33,
+    "RateUSD": 1.3229,
+    "UpdatedAt": "2020-08-24 15:04:00 +0000 UTC"
+}
+```
 
-### GET /currency/{base}/{dest}: `/currency/{base}/{dest}`
+### GET /c/currency/{base}/{dest}: `/c/currency/cad/usd`
+```
+{
+    "Rate": 0.7559
+}
+```
 
-### GET /crypto/{name}: `/crypto/{name}`
+### GET /crypto/{name}: `/crypto/bitcoin`
+```
+{
+    "Name": "BITCOIN",
+    "Symbol": "BTC",
+    "MarketCapUSD": 216941001293,
+    "price": 11745.65,
+    "CirculatingSupply": 18469900,
+    "Mineable": false,
+    "Volume": 20469801085,
+    "ChangeHour": "0.04%",
+    "ChangeDay": "0.51%",
+    "ChangeWeek": "-4.28%"
+}
+```
 
 ### Server logs
+```
+[STATUS] 2020/08/24 21:58:21 Server is running on the port 3001.
+::1 - [Mon, 24 Aug 2020 21:58:42 CEST] "GET /v1/commodity/coal HTTP/1.1 200 2.998192ms" curl/7.69.1
+::1 - [Mon, 24 Aug 2020 21:59:25 CEST] "GET /v1/currency/i/cad HTTP/1.1 200 1.354023ms" curl/7.69.1
+::1 - [Mon, 24 Aug 2020 21:59:42 CEST] "GET /v1/currency/c/cad/usd HTTP/1.1 200 1.813872ms" curl/7.69.1
+::1 - [Mon, 24 Aug 2020 22:00:08 CEST] "GET /v1/crypto/bitcoin HTTP/1.1 200 3.813747ms" curl/7.69.1
+```
 
 ## Configuration
 **Default:**
