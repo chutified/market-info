@@ -20,38 +20,38 @@ The web app connects 3 microservices and usus gRPC to communicate with all of th
 The REST API server will start without any of these dependencies, but the handler endpoints that use these services will return an error message on requests.
 
 ### Commodity service
-    - <a href="https://github.com/chutified/commodity-prices" taget="_blank">Source code</a>
-    - <a href="https://github.com/chutified/commodity-prices/blob/master/README.md" taget="_blank">Documentation</a>
-    - <a href="https://github.com/chutified/commodity-prices/blob/master/Dockerfile" taget="_blank">Dockerfile</a>
-    - <a href="https://github.com/chutified/commodity-prices#supported-commodities" target="_blank">Supported commodities</a>
+    - [Source code](https://github.com/chutified/commodity-prices)
+    - [Documentation](https://github.com/chutified/commodity-prices/blob/master/README.md)
+    - [Dockerfile](https://github.com/chutified/commodity-prices/blob/master/Dockerfile)
+    - [Supported commodities](https://github.com/chutified/commodity-prices#supported-commodities)
 
 ### Currency service
-    - <a href="https://github.com/chutified/currencies" taget="_blank">Source code</a>
-    - <a href="https://github.com/chutified/currencies/blob/master/README.md" taget="_blank">Documentation</a>
-    - <a href="https://github.com/chutified/currencies/blob/master/Dockerfile" taget="_blank">Dockerfile</a>
-    - <a href="https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes" target="_blank">Supported currencies</a>
+    - [Source code](https://github.com/chutified/currencies)
+    - [Documentation](https://github.com/chutified/currencies/blob/master/README.md)
+    - [Dockerfile](https://github.com/chutified/currencies/blob/master/Dockerfile)
+    - [Supported currencies](https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes)
 
 ### Cryptocurency service
-    - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Source code</a>
-    - <a href="https://github.com/chutified/crypto-currencies/blob/master/README.md" taget="_blank">Documentation</a>
-    - <a href="https://github.com/chutified/crypto-currencies" taget="_blank">Dockerfile</a>
-    - <a href="https://github.com/chutified/crypto-currencies/blob/master/docs/currencies.md" target="_blank">Supported cryptocurrencies</a>
+    - [source code](https://github.com/chutified/crypto-currencies)
+    - [Documentation](https://github.com/chutified/crypto-currencies/blob/master/README.md)
+    - [Dockerfile](https://github.com/chutified/crypto-currencies)
+    - [Supported cryptocurrencies](https://github.com/chutified/crypto-currencies/blob/master/docs/currencies.md)
 
 ## Tools
-    - <a href="https://gin-gonic.com/" target="_blank">Gin framework</a>
-    - <a href="https://grpc.io/" target="_blank">gRPC</a>
-    - <a href="https://git-scm.com/" target="_blank">Git</a>
-    - <a href="https://www.docker.com/" target="_blank">Docker Engine</a>
-    - <a href="https://swagger.io/" target="_blank">Swagger 2.0</a>
+    - [Gin framework](https://gin-gonic.com)
+    - [gRPC](https://grpc.io)
+    - [Git](https://git-scm.com)
+    - [Docker Engine](https://www.docker.com)
+    - [Swagger](https://swagger.io)
 
 ## API sources
-    - Commodity (<a href="https://markets.businessinsider.com/currencies" target="_blank">Markets - Business Insider</a>)
-    - Currency (<a href="https://markets.businessinsider.com/currencies" target="_blank">Markets - Business Insider</a>)
-    - Cryptocurency (<a href="https://coinmarketcap.com/all/views/all/" target="_blank">CoinMarketCap</a>)
+    - Commodity ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
+    - Currency ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
+    - Cryptocurency ([](https://coinmarketcap.com/all/views/all/CoinMarketCap</a>)
 
 ## API documentation
 The API uses the industry standart Swagger tool for its documentation.
-Swagger documentation file: <a href="https://github.com/chutified/market-info/blob/master/docs/swagger.json" target="_blank">JSON</a>/<a href="https://github.com/chutified/market-info/blob/master/docs/swagger.yaml" target="_blank">YAML</a>
+Swagger documentation file: <a href="https://github.com/chutified/market-info/blob/master/docs/swagger.json">JSON</a>/<a href="https://github.com/chutified/market-info/blob/master/docs/swagger.yaml">YAML</a>
 
 ## Usage
 ### GET `/commodity/{name}`
@@ -60,13 +60,22 @@ If the commodity is supported, server returns the commodity's `name`, current `p
 ### GET `/currency/{name}`
 If the currency is suported, server response with the currency's `name`, `country` in which it originated, `description` as the full name of the currency, `rate to USD`, `change` of the currency value in percentages and the time of the `last update`. The currency service also supports both currency symbols and names as the {name} value in a path.
 
-### POST `/currency/{base}/{dest}`
+### GET `/currency/{base}/{dest}`
 If both {base} and {dest} are valid currency names or symbols, server returns the exchange `rate` of the bases and destination currencies. The currency service also supports both currency symbols and names as the {name} value in a path.
 
 ### GET `/crypto/{name}`
 If the cryptocurrency is suported, server response with the cryptocurrency's `name`, `symbol`, `price` value in USD, `market capitalization`, `volume`, `circulating supply`, changes in last `hour`/`day`/`week` and whether is the currency `mineable`. The cryptocurrency service also supports both cryptocurrency symbols and names as the {name} value in a path.
 
 ## Examples
+### GET /commodity/{name}: `/commodity/{name}`
+
+### GET /currency/{name}: `/currency/{name}`
+
+### GET /currency/{base}/{dest}: `/currency/{base}/{dest}`
+
+### GET /crypto/{name}: `/crypto/{name}`
+
+### Server logs
 
 ## Configuration
 **Default:**
