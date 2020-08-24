@@ -20,34 +20,34 @@ The web app connects 3 microservices and usus gRPC to communicate with all of th
 The REST API server will start without any of these dependencies, but the handler endpoints that use these services will return an error message on requests.
 
 ### Commodity service
-    - [Source code](https://github.com/chutified/commodity-prices)
-    - [Documentation](https://github.com/chutified/commodity-prices/blob/master/README.md)
-    - [Dockerfile](https://github.com/chutified/commodity-prices/blob/master/Dockerfile)
-    - [Supported commodities](https://github.com/chutified/commodity-prices#supported-commodities)
+- [Source code](https://github.com/chutified/commodity-prices)
+- [Documentation](https://github.com/chutified/commodity-prices/blob/master/README.md)
+- [Dockerfile](https://github.com/chutified/commodity-prices/blob/master/Dockerfile)
+- [Supported commodities](https://github.com/chutified/commodity-prices#supported-commodities)
 
 ### Currency service
-    - [Source code](https://github.com/chutified/currencies)
-    - [Documentation](https://github.com/chutified/currencies/blob/master/README.md)
-    - [Dockerfile](https://github.com/chutified/currencies/blob/master/Dockerfile)
-    - [Supported currencies](https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes)
+- [Source code](https://github.com/chutified/currencies)
+- [Documentation](https://github.com/chutified/currencies/blob/master/README.md)
+- [Dockerfile](https://github.com/chutified/currencies/blob/master/Dockerfile)
+- [Supported currencies](https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes)
 
 ### Cryptocurency service
-    - [source code](https://github.com/chutified/crypto-currencies)
-    - [Documentation](https://github.com/chutified/crypto-currencies/blob/master/README.md)
-    - [Dockerfile](https://github.com/chutified/crypto-currencies)
-    - [Supported cryptocurrencies](https://github.com/chutified/crypto-currencies/blob/master/docs/currencies.md)
+- [source code](https://github.com/chutified/crypto-currencies)
+- [Documentation](https://github.com/chutified/crypto-currencies/blob/master/README.md)
+- [Dockerfile](https://github.com/chutified/crypto-currencies)
+- [Supported cryptocurrencies](https://github.com/chutified/crypto-currencies/blob/master/docs/currencies.md)
 
 ## Tools
-    - [Gin framework](https://gin-gonic.com)
-    - [gRPC](https://grpc.io)
-    - [Git](https://git-scm.com)
-    - [Docker Engine](https://www.docker.com)
-    - [Swagger](https://swagger.io)
+- [Gin framework](https://gin-gonic.com)
+- [gRPC](https://grpc.io)
+- [Git](https://git-scm.com)
+- [Docker Engine](https://www.docker.com)
+- [Swagger](https://swagger.io)
 
 ## API sources
-    - Commodity ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
-    - Currency ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
-    - Cryptocurency ([](https://coinmarketcap.com/all/views/all/CoinMarketCap</a>)
+- Commodity ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
+- Currency ([](https://markets.businessinsider.com/currenciesMarkets - Business Insider</a>)
+- Cryptocurency ([](https://coinmarketcap.com/all/views/all/CoinMarketCap</a>)
 
 ## API documentation
 The API uses the industry standart Swagger tool for its documentation.
