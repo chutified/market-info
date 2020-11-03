@@ -1,7 +1,7 @@
 # Market Info
-The Market Info is a REST API that provides up-to-date information about the market. More precisely, it is the data of world commodities, currencies and cryptocurrencies.
+The Market Info is a REST API that provides an up-to-date information of world commodities, currencies and cryptocurrencies.
 
-The API joins 3 microservices and uses gRPC to communicate with all of them, so the service works properly only if other three microservices are also running. To configure the targets (hosts and ports of microservices), set the variables in the `config.yml` file.
+The API joins 3 microservices and uses gRPC to communicate with all of them (to launch the service it is required to run other three microservices first. To configure targets, hosts and ports of microservices, set the variables in the `config.yml` file).
 
 ## Table of content
 - [Dependencies](https://github.com/chutified/market-info#dependencies)
