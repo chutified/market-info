@@ -1,4 +1,4 @@
-module github.com/chutified/words
+module github.com/chutommy/words
 
 go 1.14
 

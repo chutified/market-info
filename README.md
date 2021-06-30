@@ -4,38 +4,38 @@ The Market Info is a REST API that provides an up-to-date information of world c
 The API joins 3 microservices and uses gRPC to communicate with all of them (to launch the service it is required to run other three microservices first. To configure targets, hosts and ports of microservices, set the variables in the `config.yml` file).
 
 ## Table of content
-- [Dependencies](https://github.com/chutified/market-info#dependencies)
-    - [Commodity service](https://github.com/chutified/market-info#commodity-service)
-    - [Currency service](https://github.com/chutified/market-info#currency-service)
-    - [Cryptocurency service](https://github.com/chutified/market-info#cryptocurency-service)
-- [Tools](https://github.com/chutified/market-info#tools)
-- [API sources](https://github.com/chutified/market-info#api-sources)
-- [API documentation](https://github.com/chutified/market-info#api-documentation)
-- [Usage](https://github.com/chutified/market-info#usage)
-- [Examples](https://github.com/chutified/market-info#examples)
-- [Configuration](https://github.com/chutified/market-info#configuration)
-- [Directory structure](https://github.com/chutified/market-info#directory-structure)
+- [Dependencies](https://github.com/chutommy/market-info#dependencies)
+    - [Commodity service](https://github.com/chutommy/market-info#commodity-service)
+    - [Currency service](https://github.com/chutommy/market-info#currency-service)
+    - [Cryptocurency service](https://github.com/chutommy/market-info#cryptocurency-service)
+- [Tools](https://github.com/chutommy/market-info#tools)
+- [API sources](https://github.com/chutommy/market-info#api-sources)
+- [API documentation](https://github.com/chutommy/market-info#api-documentation)
+- [Usage](https://github.com/chutommy/market-info#usage)
+- [Examples](https://github.com/chutommy/market-info#examples)
+- [Configuration](https://github.com/chutommy/market-info#configuration)
+- [Directory structure](https://github.com/chutommy/market-info#directory-structure)
 
 ## Dependencies
 The REST API server starts without any of these dependencies, but the handlers' endpoints that use these services will return an error message on the requests.
 
 ### Commodity service
-- [Source code](https://github.com/chutified/commodity-prices)
-- [Documentation](https://github.com/chutified/commodity-prices/blob/master/README.md)
-- [Dockerfile](https://github.com/chutified/commodity-prices/blob/master/Dockerfile)
-- [Supported commodities](https://github.com/chutified/commodity-prices#supported-commodities)
+- [Source code](https://github.com/chutommy/commodity-prices)
+- [Documentation](https://github.com/chutommy/commodity-prices/blob/master/README.md)
+- [Dockerfile](https://github.com/chutommy/commodity-prices/blob/master/Dockerfile)
+- [Supported commodities](https://github.com/chutommy/commodity-prices#supported-commodities)
 
 ### Currency service
-- [Source code](https://github.com/chutified/currencies)
-- [Documentation](https://github.com/chutified/currencies/blob/master/README.md)
-- [Dockerfile](https://github.com/chutified/currencies/blob/master/Dockerfile)
-- [Supported currencies](https://github.com/chutified/currencies/blob/master/README.md#supported-currency-codes)
+- [Source code](https://github.com/chutommy/currencies)
+- [Documentation](https://github.com/chutommy/currencies/blob/master/README.md)
+- [Dockerfile](https://github.com/chutommy/currencies/blob/master/Dockerfile)
+- [Supported currencies](https://github.com/chutommy/currencies/blob/master/README.md#supported-currency-codes)
 
 ### Cryptocurency service
-- [source code](https://github.com/chutified/crypto-currencies)
-- [Documentation](https://github.com/chutified/crypto-currencies/blob/master/README.md)
-- [Dockerfile](https://github.com/chutified/crypto-currencies)
-- [Supported cryptocurrencies](https://github.com/chutified/crypto-currencies/blob/master/docs/currencies.md)
+- [source code](https://github.com/chutommy/crypto-currencies)
+- [Documentation](https://github.com/chutommy/crypto-currencies/blob/master/README.md)
+- [Dockerfile](https://github.com/chutommy/crypto-currencies)
+- [Supported cryptocurrencies](https://github.com/chutommy/crypto-currencies/blob/master/docs/currencies.md)
 
 ## Tools
 - [Gin framework](https://gin-gonic.com)
@@ -51,7 +51,7 @@ The REST API server starts without any of these dependencies, but the handlers' 
 
 ## API documentation
 The API uses the industry standart Swagger tool for its documentation.
-Swagger documentation file: <a href="https://github.com/chutified/market-info/blob/master/docs/swagger.json">JSON</a>/<a href="https://github.com/chutified/market-info/blob/master/docs/swagger.yaml">YAML</a>
+Swagger documentation file: <a href="https://github.com/chutommy/market-info/blob/master/docs/swagger.json">JSON</a>/<a href="https://github.com/chutommy/market-info/blob/master/docs/swagger.yaml">YAML</a>
 
 ## Usage
 ### GET `/commodity/{name}`

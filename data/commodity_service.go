@@ -3,8 +3,8 @@ package data
 import (
 	"context"
 
-	commodity "github.com/chutified/commodity-prices/protos/commodity"
-	models "github.com/chutified/market-info/models"
+	commodity "github.com/chutommy/commodity-prices/protos/commodity"
+	models "github.com/chutommy/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )

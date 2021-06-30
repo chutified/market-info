@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	data "github.com/chutified/market-info/data"
+	data "github.com/chutommy/market-info/data"
 	"github.com/pkg/errors"
 )
 

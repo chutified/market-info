@@ -3,8 +3,8 @@ package data
 import (
 	"context"
 
-	crypto "github.com/chutified/crypto-currencies/protos/crypto"
-	models "github.com/chutified/market-info/models"
+	crypto "github.com/chutommy/crypto-currencies/protos/crypto"
+	models "github.com/chutommy/market-info/models"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 )

@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	config "github.com/chutified/market-info/config"
-	handlers "github.com/chutified/market-info/handlers"
+	config "github.com/chutommy/market-info/config"
+	handlers "github.com/chutommy/market-info/handlers"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 )
